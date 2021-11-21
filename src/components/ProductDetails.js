@@ -16,6 +16,7 @@ const ProductDetails = () => {
             .catch((err) => {
             console.log("Err: ", err);
             });
+        // eslint-disable-next-line
         dispatch(selectedProduct(response.data));
     };
 
@@ -24,6 +25,7 @@ const ProductDetails = () => {
         return () => {
             dispatch(removeSelectedProduct());
         };
+    // eslint-disable-next-line
     }, [productId]);
 
     return (
@@ -36,11 +38,13 @@ const ProductDetails = () => {
                         <div className="ui vertical divider">AND</div>
                         <div className="middle aligned row">
                             <div className="column lp">
+                                {/* eslint-disable-next-line */}
                                 <img className="ui fluid image" src={image} />
                             </div>
                             <div className="column rp">
                                 <h1>{title}</h1>
                                 <h2>
+                                    {/* eslint-disable-next-line */}
                                     <a className="ui teal tag label">${price}</a>
                                 </h2>
                                 <h3 className="ui brown block header">{category}</h3>
